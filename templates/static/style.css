@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e0f7fa; /* Light cyan */
+    color: #37474f; /* Darker teal */
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 40px;
+    text-align: center;
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 32px;
+    color: #1e88e5; /* Bright blue */
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card {
+    margin-bottom: 30px;
+    background: #fbe9e7; /* Light peach */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.list-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-group-item {
+    background: #ffffff;
+    margin-bottom: 18px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #b0bec5; /* Soft gray */
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e3f2fd; /* Light blue */
+    transform: scale(1.02);
+}
+
+.list-group-item span {
+    font-size: 18px;
+    color: #0288d1; /* Medium blue */
+    font-weight: 600;
+}
+
+.btn-remove {
+    background: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-remove:hover {
+    background: #d32f2f; /* Darker red */
+    transform: translateY(-2px);
+}
+
+.actions {
+    margin-top: 35px;
+}
+
+.btn-clear {
+    display: inline-block;
+    background: #c3844a; /* Light green */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-right: 15px;
+}
+
+.btn-clear:hover {
+    background: #42b3b3; /* Green */
+    transform: translateY(-2px);
+}
+
+.empty-message {
+    font-size: 18px;
+    color: #616161; /* Medium gray */
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.add-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    transition: all 0.3s ease;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #b0bec5; /* Soft gray */
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.add-form input:focus {
+    border-color: #0288d1; /* Medium blue */
+    outline: none;
+}
+
+.add-form button {
+    background: #00bcd4; /* Cyan */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.add-form button:hover {
+    background: #0097a7; /* Darker cyan */
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .btn-clear, .btn-remove {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .add-form input, .add-form button {
+        padding: 12px;
+    }
+}
